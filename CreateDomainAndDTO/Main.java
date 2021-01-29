@@ -3,6 +3,7 @@ import Repository.*;
 import Models.*;
 import java.util.*;
 import CreateClass.*;
+import java.io.*;
 
 public class Main {
 	public static void main(String[] args){
@@ -21,7 +22,11 @@ public class Main {
 		};
 		
 		for(AbstractCreateClass createClass : classes){
-			createClass.Create();
+			try{
+				createClass.Create();
+			}catch(IOException ex){
+				System.out.println(ex);
+			}
 		}
 
 	}

@@ -2,6 +2,8 @@ package CreateClass;
 
 import Models.*;
 import java.util.*;
+import Repository.*;
+import java.io.*;
 
 public class CreateEntity extends AbstractCreateClass{
 	
@@ -12,10 +14,14 @@ public class CreateEntity extends AbstractCreateClass{
 		EntityName = entiyName;
 	}
 
-	public void Create(){
+	public void Create() throws IOException{
 		
 		// クラスの作成
 		ArrayList<String> output = CreateNewEntiryClass();
+
+		// ファイル書き込み
+		OperateJavaFile writer = new OperateJavaFile();
+		writer.Write(EntityName,output);
 
 		// debug
 		for(String text:output){
