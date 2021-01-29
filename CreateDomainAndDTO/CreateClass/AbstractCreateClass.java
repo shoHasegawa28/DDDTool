@@ -2,6 +2,7 @@ package CreateClass;
 
 import Models.*;
 import java.util.*;
+import java.io.*;
 
 public abstract class AbstractCreateClass{
 	protected ArrayList<ClassSheed> Sheeds;
@@ -10,5 +11,5 @@ public abstract class AbstractCreateClass{
 		Sheeds = sheeds;
 	}
 
-	abstract public void Create();
+	abstract public void Create() throws IOException;
 }
