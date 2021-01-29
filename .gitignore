@@ -1,1 +1,11 @@
 *.class
+*.css
+*.bat
+Class.pu
+ClassPlan.txt
+CreateDomainAndDTO.class
+CreateDomainAndDTO.java
+CreateDomainAndDTO/.gitignore
+CreateDomainAndDTO/Test.csv
+JavaDevelopTools/
+Plan.txt
