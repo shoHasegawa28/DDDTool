@@ -13,6 +13,17 @@ public class CreateEntity extends AbstractCreateClass{
 	}
 
 	public void Create(){
+		
+		// クラスの作成
+		ArrayList<String> output = CreateNewEntiryClass();
+
+		// debug
+		for(String text:output){
+			System.out.println(text);
+		}
+	}
+
+	private ArrayList<String> CreateNewEntiryClass(){
 		ArrayList<String> output = new ArrayList<String>();
 
 		output.add("public class "+ EntityName +" {");
@@ -22,9 +33,7 @@ public class CreateEntity extends AbstractCreateClass{
 			output.add("");
 		}
 		output.add("}");
-
-		for(String text:output){
-			System.out.println(text);
-		}
+		
+		return output;
 	}
 }
