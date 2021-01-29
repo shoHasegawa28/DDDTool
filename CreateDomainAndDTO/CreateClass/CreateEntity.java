@@ -13,12 +13,18 @@ public class CreateEntity extends AbstractCreateClass{
 	}
 
 	public void Create(){
-		System.out.println("public class "+ EntityName +" {");
-		System.out.println("");
+		ArrayList<String> output = new ArrayList<String>();
+
+		output.add("public class "+ EntityName +" {");
+		output.add("");
 		for(ClassSheed sheed : Sheeds){
-			System.out.println("	public " + sheed.GetTypeNames() + " " + sheed.GetValiableName() + "{ get; private set;}");
-			System.out.println("");
+			output.add("	public " + sheed.GetTypeNames() + " " + sheed.GetValiableName() + "{ get; private set;}");
+			output.add("");
 		}
-		System.out.println("}");
+		output.add("}");
+
+		for(String text:output){
+			System.out.println(text);
+		}
 	}
 }
