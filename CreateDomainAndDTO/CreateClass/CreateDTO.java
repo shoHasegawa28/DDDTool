@@ -5,13 +5,13 @@ import java.util.*;
 import Repository.*;
 import java.io.*;
 
-public class CreateEntity extends AbstractCreateClass{
+public class CreateDTO extends AbstractCreateClass{
 	
 	private String EntityName;
 
-	public CreateEntity(ArrayList<ClassSheed> sheeds,String entiyName){
+	public CreateDTO(ArrayList<ClassSheed> sheeds,String entiyName){
 		super(sheeds);
-		EntityName = entiyName;
+		EntityName = entiyName + "DTO";
 	}
 
 	public void Create() throws IOException{
@@ -35,7 +35,12 @@ public class CreateEntity extends AbstractCreateClass{
 		output.add("public class "+ EntityName +" {");
 		output.add("");
 		for(ClassSheed sheed : Sheeds){
-			output.add("	public " + sheed.GetTypeName() + " " + sheed.GetValiableName() + "{ get; private set;}");
+			String type = sheed.GetTypeName();
+			if(sheed.GetValueObjectFlg()){
+				type = sheed.GetValueObjectType(); 
+			}
+
+			output.add("	public " + type + " " + sheed.GetValiableName() + "{ get; set;}");
 			output.add("");
 		}
 		output.add("}");

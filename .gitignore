@@ -7,5 +7,7 @@ CreateDomainAndDTO.class
 CreateDomainAndDTO.java
 CreateDomainAndDTO/.gitignore
 CreateDomainAndDTO/Test.csv
+CreateDomainAndDTO/Output/*.java
 JavaDevelopTools/
 Plan.txt
+

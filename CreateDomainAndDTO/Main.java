@@ -18,6 +18,8 @@ public class Main {
 		ArrayList<AbstractCreateClass> classes = new ArrayList<AbstractCreateClass>(){ 
 			{
 				add(new CreateEntity(sheeds,entiyName));
+				add(new CreateDTO(sheeds,entiyName));
+				add(new CreateValueObject(sheeds,entiyName));
 			} 
 		};
 		
