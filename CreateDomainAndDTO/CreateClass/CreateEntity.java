@@ -34,10 +34,22 @@ public class CreateEntity extends AbstractCreateClass{
 
 		output.add("public class "+ EntityName +" {");
 		output.add("");
+		// プロパティ設定
 		for(ClassSheed sheed : Sheeds){
 			output.add("	public " + sheed.GetTypeName() + " " + sheed.GetValiableName() + "{ get; private set;}");
 			output.add("");
 		}
+
+		// コンストラクタ作成
+		output.add("	" + EntityName+"(");
+		for(ClassSheed sheed : Sheeds){
+			output.add("		"+sheed.GetTypeName() + " _" +sheed.GetValiableName().toLowerCase());
+		}
+		output.add("	){");
+		for(ClassSheed sheed : Sheeds){
+			output.add("		"+sheed.GetValiableName() + " = _" +sheed.GetValiableName().toLowerCase() + ";");
+		}
+		output.add("	}");
 		output.add("}");
 		
 		return output;
