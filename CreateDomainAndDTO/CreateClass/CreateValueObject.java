@@ -30,7 +30,7 @@ public class CreateValueObject extends AbstractCreateClass{
 		ArrayList<String> output = new ArrayList<String>();
 		output.add("public class " + sheed.GetTypeName());
 		output.add("{");
-		output.add("	private " + sheed.GetValueObjectType()+" Value{get}");
+		output.add("	private " + sheed.GetValueObjectType()+" Value{ get; }");
 		output.add("");
 		output.add("	" + sheed.GetTypeName() + "(" + sheed.GetValueObjectType() + " _value)");
 		output.add("	{");
