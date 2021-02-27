@@ -2,7 +2,7 @@ package Models;
 
 public class ClassSheed{
 	private String ValiableName;
-	private String TypeNames;
+	private String TypeName;
 	private boolean ValueObjectFlg;
 	private String ValueObjectType;
 
@@ -10,13 +10,13 @@ public class ClassSheed{
 		return ValiableName;
 	}
 	
-	public String GetTypeNames(){
-		return TypeNames;
+	public String GetTypeName(){
+		return TypeName;
 	}
-	public boolean GetValueObject(){
+	public boolean GetValueObjectFlg(){
 		return ValueObjectFlg;
 	}
-	public String GetValueObjectTyp(){
+	public String GetValueObjectType(){
 		return ValueObjectType;
 	}
 	public ClassSheed(){
@@ -29,13 +29,13 @@ public class ClassSheed{
 				String valueObjectType
 			){
 			ValiableName = valiableName;
-			TypeNames = typeNames;
+			TypeName = typeNames;
 			ValueObjectFlg = (Integer.parseInt(valueObjectFlg) == 1);
 			ValueObjectType = valueObjectType;
 	}
 
 	public void Print(){
-		System.out.println("型 = " + TypeNames);
+		System.out.println("型 = " + TypeName);
 		System.out.println("変数名 = " + ValiableName);
 		System.out.println("フラグ = " + ValueObjectFlg);
 		System.out.println("プリミティブ型 = " + ValueObjectType);
