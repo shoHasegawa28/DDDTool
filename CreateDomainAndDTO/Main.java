@@ -13,13 +13,13 @@ public class Main {
 
 		System.out.print("エンティティ名を入力してください  ");
 		Scanner sc = new Scanner(System.in);
-		String entiyName = sc.nextLine();
+		String fileName = sc.nextLine();
 
 		ArrayList<AbstractCreateClass> classes = new ArrayList<AbstractCreateClass>(){ 
 			{
-				add(new CreateEntity(sheeds,entiyName));
-				add(new CreateDTO(sheeds,entiyName));
-				add(new CreateValueObject(sheeds,entiyName));
+				add(new CreateEntity(sheeds,fileName));
+				add(new CreateDTO(sheeds,fileName));
+				add(new CreateValueObject(sheeds,fileName));
 			} 
 		};
 		
