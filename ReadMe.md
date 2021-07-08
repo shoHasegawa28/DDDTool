@@ -14,6 +14,6 @@ type: 型
 valueFlg: ValueObjectかどうか
 valueObjectType: ValueObject内の型
 
-#注意
+# 注意
 - 単体の値を持つValueObjectしか作成することが出来ない
 - コマンドプロンプトでコンパイルする際はオプションで文字コードをutf-8に指定する必要がある。
