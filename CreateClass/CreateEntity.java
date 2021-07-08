@@ -41,7 +41,7 @@ public class CreateEntity extends AbstractCreateClass{
 		}
 
 		// コンストラクタ作成
-		output.add("	" + EntityName+"(");
+		output.add("	public" + EntityName+"(");
 		for(ClassSheed sheed : Sheeds){
 			output.add("		"+sheed.GetTypeName() + " _" +sheed.GetValiableName().toLowerCase());
 		}

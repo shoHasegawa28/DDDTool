@@ -5,10 +5,13 @@ import java.io.*;
 import java.util.*;
 
 public class OperateCsvFile{
+
+	private static final String FileName = "seedData.csv";
+
 	public ArrayList<ClassSheed> Read(){
 		ArrayList<ClassSheed> result = new ArrayList<ClassSheed>();
 		try{
-			File file = new File("test.csv");
+			File file = new File(FileName);
 			BufferedReader br = new BufferedReader(new FileReader(file));
 			
 			String str;
